@@ -18,7 +18,8 @@
 
 	if(empty($nama_lengkap) || empty($email) || empty($phone) || empty($alamat) || empty($password)){
 		header("location: ".BASE_URL."index.php?page=register&notif=require&$dataForm");
-		
+	}elseif($password != $re_password) {
+		header("location: ".BASE_URL."index.php?page=register&notif=password&$dataForm");
 	}else{ 
 		mysqli_query($koneksi, "INSERT INTO user (level, nama, email, alamat, phone, password, status)
 										VALUES ('$level', '$nama_lengkap', '$email', '$alamat', '$phone', '$password', '$status')");
