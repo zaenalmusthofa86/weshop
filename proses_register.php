@@ -9,8 +9,17 @@
 	$email = $_POST['email'];
 	$phone = $_POST['phone'];
 	$alamat = $_POST['alamat'];
-	$password = md5($_POST['password']);
+	$password = $_POST['password'];
 	$re_password = $_POST['re_password'];
+
+	unset($_POST['password']);
+	unset($_POST['re_password']);
+	$dataForm = http_build_query($_POST);
+
+	if(empty($nama_lengkap) || empty($email) || empty($phone) || empty($alamat) || empty($password)){
+		header("location: ".BASE_URL."index.php?page=register&notif=require&$dataForm");
 		
-	mysqli_query($koneksi, "INSERT INTO user (level, nama, email, alamat, phone, password, status)
+	}else{ 
+		mysqli_query($koneksi, "INSERT INTO user (level, nama, email, alamat, phone, password, status)
 										VALUES ('$level', '$nama_lengkap', '$email', '$alamat', '$phone', '$password', '$status')");
+	}
