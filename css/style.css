@@ -107,3 +107,11 @@ body{
 .element-form span input[type="submit"]:hover{
     background:orange;
 }
+
+.notif {
+    background: #1e5474;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
