@@ -30,10 +30,12 @@
 					<div id="user">
 						<?php 
 							if ($user_id) {
-								echo "Hai <b>$nama</b>, <a href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>";
+								echo "Hai <b>$nama</b>, 
+									  <a href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>
+									  <a href='".BASE_URL."logout.php'>Logout</a>";
 							}else{
 								echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
-								<a href='".BASE_URL."index.php?page=register'>Register</a>";
+									  <a href='".BASE_URL."index.php?page=register'>Register</a>";
 							}
 						?>
 						
