@@ -4,7 +4,7 @@
 
 <?php
 
-	$query = mysqli_query($koneksi, "SELECT barang.*, kategori.kategori FROM barang JOIN kategori ON barang.kategori_id=kategori.kategori_id");
+	$query = mysqli_query($koneksi, "SELECT barang.*, kategori.kategori FROM barang JOIN kategori ON barang.kategori_id=kategori.kategori_id ORDER BY nama_barang ASC");
 	
 	if(mysqli_num_rows($query) == 0){
 		echo "<h3>Saat ini belum ada barang di dalam table barang!</h3>";
