@@ -205,3 +205,32 @@ body{
 .tombol-action:hover {
     background:orange;
 }
+
+#kiri {
+    width: 245px;
+    height: auto;
+    float: left;
+}
+
+#menu-kategori ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu-kategori ul li {
+    margin-bottom: 5px;
+}
+
+#menu-kategori ul li a {
+    display: block;
+    padding: 10px;
+    background: white;
+    color: #1e5474;
+    text-decoration: none;
+}
+
+#menu-kategori ul li a:hover,
+#menu-kategori ul li a.active {
+    background:#e8e8e8;
+}
