@@ -364,3 +364,8 @@ body{
     font-weight: bold;
     vertical-align: top;
 }
+
+.update-quantity {
+    width: 30px;
+    text-align: center;
+}
