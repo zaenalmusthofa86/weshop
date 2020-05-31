@@ -1,6 +1,6 @@
 <div id="frame-data-pengiriman">
 
-	<h3>Alamat Pengiriman Barang</h3>
+	<h3 class="label-data-pengiriman">Alamat Pengiriman Barang</h3>
 	
 	<div id="frame-form-pengiriman">
 	
@@ -29,7 +29,7 @@
 							$query = mysqli_query($koneksi, "SELECT * FROM kota");
 							
 							while($row=mysqli_fetch_assoc($query)){
-								echo "<option value='$row[kota_id]'>$row[kota] </option>";
+								echo "<option value='$row[kota_id]'>$row[kota] (".rupiah($row["tarif"]).") </option>";
 							}
 						?>
 					</select>
