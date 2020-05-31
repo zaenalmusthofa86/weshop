@@ -356,3 +356,11 @@ body{
 #detail-barang #keterangan {
     margin: 20px 0px;
 }
+
+.total-barang {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: top;
+}
