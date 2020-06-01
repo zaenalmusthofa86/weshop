@@ -104,3 +104,10 @@
 		
 	</table>
 	
+	<div id="frame-keterangan-pembayaran">
+		<p>Silahkan Lakukan pembayaran ke Bank ABC !<br/>
+		   Nomor Account : 0000-9999-8888 (A/N Weshop).<br/>
+		   Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran !
+		   <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.
+		</p>
+	</div>
