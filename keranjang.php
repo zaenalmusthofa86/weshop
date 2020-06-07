@@ -49,7 +49,7 @@
 
 				echo "<div id='frame-button-keranjang'>
 				<a id='lanjut-belanja' href='".BASE_URL."index.php'>< Lanjut Belanja</a>
-				<a id='lanjut-pemesanan' href='".BASE_URL."index.php?page=data_pemesan'>Lanjut Pemesanan ></a>
+				<a id='lanjut-pemesanan' href='".BASE_URL."data_pemesan.html'>Lanjut Pemesanan ></a>
 			  </div>";
 
 	}
