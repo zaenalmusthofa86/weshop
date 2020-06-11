@@ -23,7 +23,7 @@
 				<th class='tengah'>Action</th>
 			 </tr>";
 			 
-		$no=1;
+		$no = 1 + $mulai_dari;
 		while($row=mysqli_fetch_assoc($queryKategori)){
 			
 			echo "<tr>
@@ -41,12 +41,8 @@
 		echo "</table>";
 
 		$queryHitungKategori = mysqli_query($koneksi, "SELECT * FROM kategori");
-		$total_data = mysqli_num_rows($queryHitungKategori);
-		$total_halaman = ceil($total_data / $data_per_halaman);
-	
-		for ($i = 1; $i<=$total_halaman;$i++){ 
-			echo "<a href='".BASE_URL."index.php?page=my_profile&module=kategori&action=list&pagination=$i'>$i</a>";
-		}
+		pagination ($queryHitungKategori, $data_per_halaman, $pagination, "index.php?page=my_profile&module=kategori&action=list");
+
 	}
 
 ?>
