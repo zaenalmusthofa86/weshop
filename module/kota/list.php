@@ -57,6 +57,7 @@
 						<td class='tengah'>$rowKota[status]</td>
 						<td class='tengah'>
 							<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=kota&action=form&kota_id=$rowKota[kota_id]"."'>Edit</a>
+							<a class='tombol-action' href='".BASE_URL."module/kota/action.php?button=Delete&kota_id=$rowKota[kota_id]'>Delete</a>
 						</td>
 					 </tr>";
 				

@@ -59,6 +59,7 @@
 					<td class='tengah'>$row[status]</td>
 					<td class='tengah'>
 						<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=barang&action=form&barang_id=$row[barang_id]'>Edit</a>
+						<a class='tombol-action' href='".BASE_URL."module/barang/action.php?button=Delete&barang_id=$row[barang_id]'>Delete</a>
 					</td>
 				  </tr>";
 				  

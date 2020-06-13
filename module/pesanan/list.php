@@ -61,6 +61,7 @@
 					<td class='kiri'>$row[nama]</td>
 					<td class='kiri'>
 						<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=$row[pesanan_id]'>Detail Pesanan</a>
+						<a class='tombol-action' href='".BASE_URL."module/pesanan/action.php?button=Delete&pesanan_id=$row[pesanan_id]'>Delete</a>
 						$adminButton
 					</td>
 				 </tr>";

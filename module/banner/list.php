@@ -60,7 +60,9 @@
                         <td>$rowBanner[banner]</td>
                         <td><a target='blank' href='".BASE_URL."$rowBanner[link]'>$rowBanner[link]</a></td>
                         <td class='tengah'>$rowBanner[status]</td>
-                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=banner&action=form&banner_id=$rowBanner[banner_id]"."'>Edit</a></td>
+                        <td class='tengah'>
+                        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=banner&action=form&banner_id=$rowBanner[banner_id]"."'>Edit</a>
+                        <a class='tombol-action' href='".BASE_URL."module/banner/action.php?button=Delete&banner_id=$rowBanner[banner_id]'>Delete</a></td>
                      </tr>";
                 
                 $no++;

@@ -5,16 +5,15 @@
 	
 	session_start();
 	
-	$pesanan_id = $_GET['pesanan_id'];
-	$button = $_POST['button'];
+	$button = isset($_POST['button']) ? $_POST['button'] : $_GET['button'];
+    $pesanan_id = isset($_GET['pesanan_id']) ? $_GET['pesanan_id'] : "";
+
+    $user_id = isset($_SESSION["user_id"]) ? $_POST['user_id'] : false;
+	$nomor_rekening = isset($_POST['nomor_rekening']) ? $_POST['nomor_rekening'] : false;
+	$nama_account = isset($_POST['nama_account']) ? $_POST['nama_account'] : false;
+	$tanggal_transfer = isset($_POST['tanggal_transfer']) ? $_POST['tanggal_transfer'] : false;
 	
 	if($button == "Konfirmasi"){
-	
-		$user_id = $_SESSION["user_id"];
-		$nomor_rekening = $_POST['nomor_rekening'];
-		$nama_account = $_POST['nama_account'];
-		$tanggal_transfer = $_POST['tanggal_transfer'];
-		
 		$queryPembayaran = mysqli_query($koneksi, "INSERT INTO konfirmasi_pembayaran (pesanan_id, nomor_rekening, nama_account, tanggal_transfer)
 																			VALUES ('$pesanan_id', '$nomor_rekening', '$nama_account', '$tanggal_transfer')");
 																			
@@ -36,6 +35,8 @@
 				mysqli_query($koneksi, "UPDATE barang SET stok=stok-$quantity WHERE barang_id='$barang_id'");
 			}
 		}
+	}else if($button == "Delete"){
+		mysqli_query($koneksi, "DELETE FROM pesanan WHERE pesanan_id='$pesanan_id'");
 	}
 	
 	header("location:".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
